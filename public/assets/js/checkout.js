@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
       icon: "warning",
       confirmButtonText: "Aceptar",
     }).then(() => {
-      window.location.href = "/src/views/ventas.html";
+      window.location.href = "../views/ventas.html";
     });
   };
 
@@ -164,15 +164,17 @@ document.addEventListener("DOMContentLoaded", () => {
     document.execCommand("copy");
     document.body.removeChild(textarea);
 
-    Swal.fire("Copiado al portapapeles", "", "success");
-  };
+    Swal.fire("Copiado al portapapeles", "", "success").then(() => {
+        window.location.href = "../views/ventas.html";
+    });
+};
 
   const vaciarCarrito = () => {
     localStorage.setItem("carrito", JSON.stringify([]));
   };
 
   const volverATienda = () => {
-    window.location.href = "/../../src/index.html";
+    window.location.href = "../views/ventas.html";
   };
 
   renderProductos();
