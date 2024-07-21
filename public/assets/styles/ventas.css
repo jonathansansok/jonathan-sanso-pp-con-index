@@ -72,11 +72,11 @@
 @media (max-width: 700px) {
   .todosParametros {
     flex-wrap: wrap;
-    height: 160px;
+    height: 300px;
   }
-  .vaciarCarrito {
+/*   .vaciarCarrito {
     font-size: 18px;
-  }
+  } */
 }
 
 .marcaTodo {
