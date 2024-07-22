@@ -61,7 +61,11 @@ h5 {
   box-shadow: 0 0 15px rgba(121, 120, 120, 0.7); /* Sombra gris del último estilo */
   transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transición suave del último estilo */
 }
-
+@media (max-width: 495px) {
+  .formCheckOut  {
+    width: 100%;
+  }
+}
 #nombre,
 #apellido,
 #direccion {
@@ -179,4 +183,42 @@ h5 {
 
 .articlesCheckOut {
   margin-bottom: 40px;
+}
+
+/* CSS adicional para mejorar la responsividad del modal de SweetAlert2 */
+.swal2-popup {
+  width: 90%;
+  max-width: 500px; /* Establecer un ancho máximo para el modal */
+}
+
+.swal2-title {
+  font-size: 1.5rem; /* Ajustar el tamaño de fuente del título */
+  text-align: center; /* Centrar el texto del título */
+}
+
+.swal2-content {
+  font-size: 1rem; /* Ajustar el tamaño de fuente del contenido */
+  text-align: left; /* Alinear el texto del contenido a la izquierda */
+  padding: 20px; /* Añadir padding alrededor del contenido */
+}
+
+.swal2-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.swal2-styled {
+  font-size: 1rem; /* Ajustar el tamaño de fuente de los botones */
+  padding: 10px; /* Añadir padding a los botones */
+}
+
+.copy-button {
+  background-color: #4caf50;
+  color: white;
+}
+
+.copy-button:hover {
+  background-color: #45a049;
 }
