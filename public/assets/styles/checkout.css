@@ -62,8 +62,18 @@ h5 {
   transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transición suave del último estilo */
 }
 @media (max-width: 495px) {
-  .formCheckOut  {
+  
+
+  .formCheckOut {
     width: 100%;
+  }
+}
+@media (max-width: 910px) {
+  .outHamburg {
+    margin-top: 10px;
+  }
+  .cielo .cieloLista.show {
+    height: 400px;
   }
 }
 #nombre,
@@ -179,7 +189,6 @@ h5 {
 .btnMas:active {
   animation: rotate 0.8s ease; /* Duración y tipo de la animación */
 }
-
 
 .articlesCheckOut {
   margin-bottom: 40px;
