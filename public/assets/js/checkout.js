@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
       html: mensaje,
       icon: "info",
       showCancelButton: true,
-      confirmButtonText: "No, volver a Home",
+      confirmButtonText: "No, volver a elegir",
       cancelButtonText: "Copiar y enviar por What's App",
       customClass: {
         cancelButton: "copy-button",

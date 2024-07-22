@@ -2513,6 +2513,7 @@ textarea textarea {
   padding-left: 30px;
   border: solid 2px black;
   border-radius: 10px;
+  transition: 0.5s ease-in-out;
 }
 
 .carritoTodo {
