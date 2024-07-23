@@ -151,7 +151,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const copiarAlPortapapeles = (texto) => {
-    const telefono = "+5491169123268";
+    const telefono = "+5491130257638";
     const mensaje = encodeURIComponent(texto);
     const whatsappURL = `https://wa.me/${telefono}?text=${mensaje}`;
 
