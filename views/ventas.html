@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="../public/assets/img/favicon.png" type="image/x-icon" /> 
-    <title>Catálogo | VIRTUASTATE</title>
+    <title>Contacto | VIRTUASTATE</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -98,7 +98,7 @@
                 </li>
                 <li>
                   <a class="cielo-servicios" href="#" target="_blank"
-                    >Catálogo</a
+                    >Contacto</a
                   >
                 </li>
               </ul>
@@ -110,42 +110,45 @@
       </div>
     </header>
 
-    <main class="articles articlesVentas">
-        <h1 class="titleParticularCommerce">CATÁLOGO </h1>
-        <div class="checkoutWay">
-            <h2 class="subtitleResp">Imagina tu recorrido y elige...</h2>
-        </div><!-- EMPIEZA CARDS -->
-        <article class="carritoTodo">
-
-            <section class="buyModifiers">
-                <div class="todosParametros">
-                  <button id="vaciarCarrito" class="vaciarCarrito">Vaciar solicitud</button> <!-- Botón para vaciar carrito -->
-                  <form id="buscador">
-                    <div class="row buscadorInside">
-                        <div class="marcaTodo">
-                            <label origenEscrito="origen">Tipo</label>
-                            <select class="selectContainerOk" id="selectContainer">
-                                <option class="Seleccion" id="elija" value="">HD/4K</option>
-                                <option class="usa" value="HD">HD</option> 
-                                <option class="uk" value="4K">4K</option>
-                            </select>
-                        </div>
-                        
-                    </div>
-                    
-                </form>
-               
-                    <div class="shoppingTodo">
-                        <a id="shoppingLogo" class="shoppingCart" href="checkout.html" target="_blank"><img src="https://icongr.am/fontawesome/shopping-cart.svg?size=60&color=4ca725" alt="shopping cart"></a>
-                        <p class="contadorUnidades" id="contadorId">00</p>
-
-                    </div>
-                   
-                </div>
-            </section>
-            <section id="renderProds"></section>
-        </article>
-    </main>
+    <main class="contentWrapper">
+      <article class="contactArticle">
+          <div class="contactFormContainer">
+              <h2>Contacto</h2>
+  
+              <form id="contactFormNew" novalidate>
+                  <!-- Nombre -->
+                  <div class="fieldGroup">
+                      <input type="text" id="userName" required>
+                      <label for="userName">Nombre y apellido</label>
+                      <span class="formError" id="errorUserName">Este campo es obligatorio</span>
+                  </div>
+  
+                  <!-- Correo -->
+                  <div class="fieldGroup">
+                      <input type="email" id="userEmail" required>
+                      <label for="userEmail">Correo</label>
+                      <span class="formError" id="errorUserEmail">Introduce un correo válido</span>
+                  </div>
+  
+                  <!-- Asunto -->
+                  <div class="fieldGroup">
+                      <input type="text" id="userSubject" required>
+                      <label for="userSubject">Asunto</label>
+                  </div>
+  
+                  <!-- Mensaje -->
+                  <div class="fieldGroup">
+                      <textarea id="userMessage" rows="4" required></textarea>
+                      <label for="userMessage">Mensaje</label>
+                  </div>
+  
+                  <!-- Botón de enviar -->
+                  <button type="submit" class="submitButton">Enviar Mensaje</button>
+              </form>
+          </div>
+      </article>
+  </main>
+  
 
     <footer data-aos="fade-up" class="footer">
         <div>
@@ -283,119 +286,6 @@
       src="https://cdn.jsdelivr.net/npm/@leadsales/
 leadclick@1.11.1/dist/leadclick/leadclick.esm.js"
     ></script>
-    <script src="public/assets/js/particles.min.js"></script>
-    <script>
-      particlesJS({
-        particles: {
-          number: {
-            value: 80,
-            density: {
-              enable: true,
-              value_area: 800,
-            },
-          },
-          color: {
-            value: "#000000",
-          },
-          shape: {
-            type: "circle",
-            stroke: {
-              width: 0,
-              color: "#000000",
-            },
-            polygon: {
-              nb_sides: 5,
-            },
-            image: {
-              src: "img/github.svg",
-              width: 100,
-              height: 100,
-            },
-          },
-          opacity: {
-            value: 0.5,
-            random: false,
-            anim: {
-              enable: false,
-              speed: 1,
-              opacity_min: 0.1,
-              sync: false,
-            },
-          },
-          size: {
-            value: 3,
-            random: true,
-            anim: {
-              enable: false,
-              speed: 40,
-              size_min: 0.1,
-              sync: false,
-            },
-          },
-          line_linked: {
-            enable: true,
-            distance: 150,
-            color: "#000000",
-            opacity: 0.4,
-            width: 1,
-          },
-          move: {
-            enable: true,
-            speed: 6,
-            direction: "none",
-            random: false,
-            straight: false,
-            out_mode: "out",
-            bounce: false,
-            attract: {
-              enable: false,
-              rotateX: 600,
-              rotateY: 1200,
-            },
-          },
-        },
-        interactivity: {
-          detect_on: "canvas",
-          events: {
-            onhover: {
-              enable: true,
-              mode: "repulse",
-            },
-            onclick: {
-              enable: true,
-              mode: "push",
-            },
-            resize: true,
-          },
-          modes: {
-            grab: {
-              distance: 400,
-              line_linked: {
-                opacity: 1,
-              },
-            },
-            bubble: {
-              distance: 400,
-              size: 40,
-              duration: 2,
-              opacity: 8,
-              speed: 3,
-            },
-            repulse: {
-              distance: 200,
-              duration: 0.4,
-            },
-            push: {
-              particles_nb: 4,
-            },
-            remove: {
-              particles_nb: 2,
-            },
-          },
-        },
-        retina_detect: true,
-      });
-    </script>
-    <script src="../public/assets/js/ventas.js"></script>
+        <script src="../public/assets/js/checkoutvacio.js"></script>
   </body>
 </html>

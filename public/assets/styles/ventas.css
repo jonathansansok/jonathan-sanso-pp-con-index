@@ -1,144 +1,125 @@
-#buscador {
-  transition: box-shadow 0.3s ease-in-out; /* Transición suave para la sombra */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+}
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
 }
 
-#buscador:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(20deg); /* Ajusta el ángulo de rotación */
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-.shoppingTodo {
-  background-color: white; /* Fondo blanco */
-  padding: 5px 20px 5px 20px;
-  border-radius: 5px;
-  width: 190px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center; /* Centra los elementos dentro del contenedor */
-  align-items: center; /* Centra verticalmente los elementos */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra gris por defecto */
-  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transición suave para el cambio de color de fondo y sombra */
-}
-.contadorUnidades {
-    color: black;
-    background-color: #4ca725;
-    width: 30px;
-    height: 25px;
-    text-align: center;
-    border-radius: 50%;
-    margin: -20px 0px 0px 5px;
-  }
-@media (max-width: 501px) {
-    .contadorUnidades {
-      width: 30%;
-      margin-left: 0px;
-    }
-  }
-.shoppingTodo:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Sombra más grande al pasar el mouse */
-}
-
-.vaciarCarrito {
-  background: #ff4d4d;
+.contactFormContainer {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
   border-radius: 10px;
-  padding: 5px 10px;
-  border: none;
-  color: white;
-  font-size: 20px;
-  cursor: pointer;
-  margin-left: 10px;
-  box-shadow: 0 0 15px rgba(128, 128, 128, 0.8); /* Aumenta el tamaño y la opacidad de la sombra */
-  transition: box-shadow 0.8s ease, color 0.8s ease; /* Transición suave para la sombra y el color */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-.vaciarCarrito:hover {
-  color: black; /* Cambia el color del texto al pasar el cursor */
-  box-shadow: 0 0 25px rgba(128, 128, 128, 1); /* Aumenta el tamaño de la sombra al pasar el cursor */
+h2 {
+  text-align: center;
+  color: #4ca725;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
 }
 
-.vaciarCarrito:active {
-  animation: rotate 0.4s ease; /* Duración y tipo de la animación */
-}
-@media (max-width: 700px) {
-  .todosParametros {
-    flex-wrap: wrap;
-    height: 300px;
-  }
-/*   .vaciarCarrito {
-    font-size: 18px;
-  } */
+.fieldGroup {
+  position: relative;
+  margin-bottom: 20px;
 }
 
-.marcaTodo {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center; /* Centra verticalmente el contenido */
-  gap: 10px; /* Espacio entre el label y el select */
-  margin-bottom: 7px; /* Espacio inferior para separar de otros elementos */
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  outline: none;
 }
 
-.buscadorInside {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  gap: 10px;
+input:focus,
+textarea:focus {
+  border-color: #4ca725;
 }
 
-/* Estilo para el label */
-label[origenEscrito="origen"] {
+label {
+  position: absolute;
+  top: 14px;
+  left: 15px;
+  color: #999;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+input:focus + label,
+input:not(:placeholder-shown) + label,
+textarea:focus + label,
+textarea:not(:placeholder-shown) + label {
+  top: -10px;
+  left: 10px;
+  color: #4ca725;
   font-size: 16px;
   font-weight: bold;
-  color: #333;
-  display: block;
-  margin-bottom: 10px;
-  text-transform: uppercase; /* Opcional: transforma el texto a mayúsculas */
-  letter-spacing: 1px; /* Opcional: espaciado entre letras */
-  transition: color 0.3s ease; /* Transición suave para el color */
+  background-color: white;
+  padding: 0 5px;
 }
 
-label[origenEscrito="origen"]:hover {
-  color: #007bff; /* Cambia el color al pasar el cursor */
+textarea {
+  resize: none;
 }
 
-/* Estilo para el select */
-.selectContainerOk {
-  font-size: 5px;
+.submitButton {
   width: 100%;
-  padding: 10px 15px;
+  padding: 12px;
+  background-color: #4ca725;
+  color: white;
+  border: none;
   border-radius: 5px;
-  border: 1px solid #ddd;
-  background-color: #fff;
-  font-size: 16px;
-  color: #333;
+  font-size: 18px;
   cursor: pointer;
-  transition: border 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-  margin-top: 10px;
-  margin-bottom: 5px;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-.selectContainerOk:focus {
-  border-color: #007bff; /* Cambia el borde al enfocar */
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra más destacada al enfocar */
-  outline: none; /* Elimina el borde predeterminado del enfoque */
+.submitButton:hover {
+  background-color: #3b8f1a;
 }
 
-/* Estilo para las opciones */
-.selectContainerOk option {
-  font-size: 16px;
-  color: #333;
+.formError {
+  color: red;
+  font-size: 12px;
+  display: none;
+  margin-top: 5px;
 }
 
-.selectContainerOk option:hover {
-  background-color: #f1f1f1; /* Color de fondo al pasar el cursor sobre una opción */
+.fieldGroup input:invalid ~ .formError,
+.fieldGroup textarea:invalid ~ .formError {
+  display: block;
+}
+
+@media (max-width: 501px) {
+  .contactFormContainer {
+      width: 90%;
+  }
+
+  .submitButton {
+      font-size: 16px;
+  }
+}
+.contactArticle{
+  background-color: white;
+}
+
+.contactFormContainer{
+margin-top: 60px;
+margin-bottom: 60px;
 }
