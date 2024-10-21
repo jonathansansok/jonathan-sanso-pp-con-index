@@ -2,10 +2,6 @@ body {
   font-family: 'Arial', sans-serif;
   background-color: #f4f4f4;
 }
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f4f4f4;
-}
 
 .contactFormContainer {
   width: 100%;
@@ -122,4 +118,8 @@ textarea {
 .contactFormContainer{
 margin-top: 60px;
 margin-bottom: 60px;
+}
+
+#contactFormNew{
+  width: auto;
 }
